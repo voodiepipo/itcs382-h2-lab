@@ -1,34 +1,36 @@
 # Lab Report, Designing the Data Management Layer with H2
 
-Repository URL:
+Repository URL: https://github.com/voodiepipo/itcs382-h2-lab
 
 ## Tools
 
 | Item | Version or name |
 | --- | --- |
-| JDK | |
-| Maven | |
-| IDE | |
-| AI tool and exact model, if you used one | |
+| JDK |	24.0.2 (java -version; Maven Java 27.0.1) |
+| Maven | 	3.10.0 |
+| IDE | 	Visual Studio Cod|
+| AI tool and exact model, if you used one | 	OpenAI Codex, GPT-6|
 
 ## Part 0. From a store in memory to H2
 
-Commit of the starter, before any change:
+Commit of the starter, before any change: 86e7071
 
-0.3 Your prediction for `staff`, written before the second run:
+0.3 Your prediction for `staff`, written before the second run: 3
 
 Output of the second run, for `staff` and `quit`:
 
 ```text
-
+> staff
+Free lockers: 3
+> quit
 ```
 
-State in one sentence where you think the parcels of the first run were kept.
+State in one sentence where you think the parcels of the first run were kept. The parcels were kept in the InMemoryParcelRepository map in the running program's memory, which was cleared when the program ended.
 
 0.5 The line of Main that you would change to keep the parcels somewhere else:
 
 ```java
-
+ParcelRepository repository = new InMemoryParcelRepository();
 ```
 
 0.6 Commit of the switch to H2:
